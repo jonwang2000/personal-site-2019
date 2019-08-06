@@ -1,22 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 
-import Particles from 'react-particles-js'
-
 import ParticleBackground from "../components/ParticleBackground"
-import TextBlock from "../components/TextBlock"
+
+const Italics = styled.p`
+    font-style: italics;
+`
 
 // Helper functions
 const dataToBlockList = data => {
     return data.map((block, index) => (
-        <TextBlock
-            title={block.title}
-            subtitle={block.subtitle}
-            main={block.main}
-            italics={block.italics}
-            link={block.link}
-            key={index}
-        />
+        <div key={index}>
+            <a href={block.link}>
+                <h3>{block.title}</h3>
+                <h4>{block.subtitle}</h4>
+                <p>{block.main}</p>
+                <Italics>{block.italics}</Italics>
+            </a>
+        </div>
     ))
 }
 
