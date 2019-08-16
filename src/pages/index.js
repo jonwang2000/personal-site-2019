@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import ParticleBackground from "../components/ParticleBackground"
+import Section from "../components/Section"
 
 // Styled Components
 const Base = styled.div`
@@ -18,36 +19,23 @@ const Upper = styled.div`
 
 const Category = styled.div`
     grid-column: 1/-1;
-`
-
-const Section = styled.div`
-    line-height: 0;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 1em;
-`
-const SectionSubtitle = styled.p`
-    font-size: 1em;
-`
-const SectionText = styled.p`
-    font-size: 0.9em;
-`
-const SectionItalics = styled.p`
-    font-size: 0.9em;
-    font-style: italic;
+    margin: 0 auto;
+    @media (min-width: 900px) {
+        grid-column: span 4;
+    }
 `
 
 // Helper functions
 const dataToBlockList = data => {
     return data.map((block, index) => (
-        <Section key={index}>
-            <a href={block.link}>
-                <SectionSubtitle>{block.title}</SectionSubtitle>
-                <SectionSubtitle>{block.subtitle}</SectionSubtitle>
-                <SectionText>{block.main}</SectionText>
-                <SectionItalics>{block.italics}</SectionItalics>
-            </a>
-        </Section>
+        <Section
+            key={index}
+            link={block.link}
+            title={block.title}
+            subtitle={block.subtitle}
+            main={block.main}
+            italics={block.italics}
+        />
     ))
 }
 
@@ -74,6 +62,8 @@ export default () => {
             <Category>{dataToBlockList(expData)}</Category>
 
             <Category>{dataToBlockList(projData)}</Category>
+
+            <Category>{dataToBlockList(projData)}</Category>
         </Base>
     )
 }
@@ -82,7 +72,8 @@ const expData = [
     {
         title: "Software Tester",
         subtitle: "Palette Gear",
-        main: "tested stuff",
+        main:
+            "tested stuffas df;lkajd;fja ds;lk jfa;lsdkjfa ;ldskjfa ;ldksjfa;lskdj fa; lkjdfl;",
         italics: "May 2019 - Aug 2019",
         link: "#",
     },
