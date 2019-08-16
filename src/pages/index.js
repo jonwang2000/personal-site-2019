@@ -3,47 +3,78 @@ import styled from "styled-components"
 
 import ParticleBackground from "../components/ParticleBackground"
 
-const Italics = styled.p`
-    font-style: italics;
+// Styled Components
+const Base = styled.div`
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1em;
+`
+
+const Upper = styled.div`
+    grid-column: 1/-1;
+`
+
+const Category = styled.div`
+    grid-column: 1/-1;
+`
+
+const Section = styled.div`
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
+`
+const SectionSubtitle = styled.p`
+    font-size: 1em;
+`
+const SectionText = styled.p`
+    font-size: 0.9em;
+`
+const SectionItalics = styled.p`
+    font-size: 0.9em;
+    font-style: italic;
 `
 
 // Helper functions
 const dataToBlockList = data => {
     return data.map((block, index) => (
-        <div key={index}>
+        <Section key={index}>
             <a href={block.link}>
-                <h3>{block.title}</h3>
-                <h4>{block.subtitle}</h4>
-                <p>{block.main}</p>
-                <Italics>{block.italics}</Italics>
+                <SectionSubtitle>{block.title}</SectionSubtitle>
+                <SectionSubtitle>{block.subtitle}</SectionSubtitle>
+                <SectionText>{block.main}</SectionText>
+                <SectionItalics>{block.italics}</SectionItalics>
             </a>
-        </div>
+        </Section>
     ))
 }
 
-// Styled Components
-const Section = styled.div`
-`
-
 export default () => {
     return (
-        <div>
-            <ParticleBackground/>
+        <Base>
+            <ParticleBackground />
 
-            <h1>Jonathan Wang</h1>
-            <h2>Mathematics, UW 2023</h2>
+            <Upper>
+                <h1>Jonathan Wang</h1>
+                <h2>Mathematics, UW 2023</h2>
 
-            <p>
-                I'm a mathematics student at the University of Waterloo, working
-                on my programming and math skills. I'm always looking to learn
-                new things, and I enjoy hands-on experiences.
-            </p>
-            <p>I'm a fan of video games, cooking, and the Toronto Raptors.</p>
+                <p>
+                    I'm a mathematics student at the University of Waterloo,
+                    working on my programming and math skills. I'm always
+                    looking to learn new things, and I enjoy hands-on
+                    experiences.
+                </p>
+                <p>
+                    I'm a fan of video games, cooking, and the Toronto Raptors.
+                </p>
+            </Upper>
 
-            <Section>{dataToBlockList(expData)}</Section>
+            <Category>{dataToBlockList(expData)}</Category>
 
-            <Section>{dataToBlockList(projData)}</Section>
-        </div>
+            <Category>{dataToBlockList(projData)}</Category>
+        </Base>
     )
 }
 
@@ -58,6 +89,13 @@ const expData = [
 ]
 
 const projData = [
+    {
+        title: "Project Title",
+        subtitle: "project subtitle",
+        main: "project main",
+        italics: "wow technologies",
+        link: "#",
+    },
     {
         title: "Project Title",
         subtitle: "project subtitle",
