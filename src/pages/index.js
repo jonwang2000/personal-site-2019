@@ -15,6 +15,7 @@ const Base = styled.div`
 
 const Upper = styled.div`
     grid-column: 1/-1;
+    text-align: justify;
 `
 
 const Category = styled.div`

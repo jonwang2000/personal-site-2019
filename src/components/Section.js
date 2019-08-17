@@ -2,11 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 const SectionWrapper = styled.div`
-    width: 100%;
+    width: auto;
     margin: 0;
     padding: 0;
     line-height: 1.4;
     padding-bottom: 1em;
+    background-color: #eeee;
+    text-align: justify;
 `
 const SectionSubtitle = styled.div`
     font-size: 1em;
