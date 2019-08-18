@@ -15,14 +15,19 @@ const Base = styled.div`
 
 const Upper = styled.div`
     grid-column: 1/-1;
+    line-height: 160%;
 `
 
 const Category = styled.div`
     grid-column: 1/-1;
-    margin: 0 auto;
     @media (min-width: 900px) {
         grid-column: span 4;
     }
+`
+
+const Logo = styled.h1`
+    font-size: 4em;
+    line-height: 0.5;
 `
 
 // Helper functions
@@ -45,6 +50,7 @@ export default () => {
             <ParticleBackground />
 
             <Upper>
+                <Logo>JW</Logo>
                 <h1>Jonathan Wang</h1>
                 <h2>Mathematics, UW 2023</h2>
 
@@ -82,8 +88,8 @@ const expData = [
 const projData = [
     {
         title: "Project Title",
-        subtitle: "project subtitle",
-        main: "project main",
+        subtitle: "project sasdf a",
+        main: "prasdfasdfasdfasd asdf asdf asdf aasdfasdfasdfasdsdf asdfoject main",
         italics: "wow technologies",
         link: "#",
     },
