@@ -8,7 +8,6 @@ const SectionWrapper = styled.div`
     line-height: 1.4;
     padding-bottom: 1em;
     background-color: #eeee;
-    text-align: justify;
 `
 const SectionSubtitle = styled.div`
     font-size: 1em;
