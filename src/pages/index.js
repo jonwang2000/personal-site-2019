@@ -1,22 +1,17 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import Section from "../components/Section"
 import PostLink from "../components/PostLink"
+import Category from "../components/Category"
 
 // Styled Components
 const Upper = styled.div`
     grid-column: 1/-1;
     line-height: 160%;
     text-align: justify;
-`
-
-const Category = styled.div`
-    grid-column: 1/-1;
-    @media (min-width: 900px) {
-        grid-column: span 4;
-    }
 `
 
 const Logo = styled.h1`
@@ -65,11 +60,11 @@ export default ({
                 </p>
             </Upper>
 
-            <Category>{dataToBlockList(expData)}</Category>
+            <Category title="Experience">{dataToBlockList(expData)}</Category>
 
-            <Category>{dataToBlockList(projData)}</Category>
+            <Category title="Projects">{dataToBlockList(projData)}</Category>
 
-            <Category>{Posts}</Category>
+            <Category title="Blog">{Posts}</Category>
         </Layout>
     )
 }
