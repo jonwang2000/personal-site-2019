@@ -101,6 +101,13 @@ const projData = [
         italics: "wow technologies",
         link: "#",
     },
+    {
+        title: "Project Title",
+        subtitle: "project subtitle",
+        main: "project main",
+        italics: "wow technologies",
+        link: "#",
+    },
 ]
 
 export const pageQuery = graphql`
