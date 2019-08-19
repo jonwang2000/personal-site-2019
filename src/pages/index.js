@@ -1,18 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import ParticleBackground from "../components/ParticleBackground"
+import Layout from "../components/Layout"
 import Section from "../components/Section"
+import PostLink from "../components/PostLink"
 
 // Styled Components
-const Base = styled.div`
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1em;
-`
-
 const Upper = styled.div`
     grid-column: 1/-1;
     line-height: 160%;
@@ -45,11 +38,17 @@ const dataToBlockList = data => {
     ))
 }
 
-export default () => {
-    return (
-        <Base>
-            <ParticleBackground />
+export default ({
+    data: {
+        allMarkdownRemark: { edges },
+    },
+}) => {
+    const Posts = edges
+        .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+        .slice(0, 5)
 
+    return (
+        <Layout>
             <Upper>
                 <Logo>JW</Logo>
                 <h1>Jonathan Wang</h1>
@@ -70,8 +69,8 @@ export default () => {
 
             <Category>{dataToBlockList(projData)}</Category>
 
-            <Category>{dataToBlockList(projData)}</Category>
-        </Base>
+            <Category>{Posts}</Category>
+        </Layout>
     )
 }
 
@@ -90,7 +89,8 @@ const projData = [
     {
         title: "Project Title",
         subtitle: "project sasdf a",
-        main: "prasdfasdfasdfasd asdf asdf asdf aasdfasdfasdfasdsdf asdfoject main",
+        main:
+            "prasdfasdfasdfasd asdf asdf asdf aasdfasdfasdfasdsdf asdfoject main",
         italics: "wow technologies",
         link: "#",
     },
@@ -102,3 +102,21 @@ const projData = [
         link: "#",
     },
 ]
+
+export const pageQuery = graphql`
+    query {
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+            edges {
+                node {
+                    id
+                    excerpt(pruneLength: 250)
+                    frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        title
+                    }
+                }
+            }
+        }
+    }
+`
