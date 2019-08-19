@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
 import Section from "../components/Section"
@@ -44,6 +45,9 @@ export default ({
 
     return (
         <Layout>
+            <Helmet>
+                <title>Jonathan Wang</title>
+            </Helmet>
             <Upper>
                 <Logo>JW</Logo>
                 <h1>Jonathan Wang</h1>
@@ -64,7 +68,10 @@ export default ({
 
             <Category title="Projects">{dataToBlockList(projData)}</Category>
 
-            <Category title="Blog">{Posts}</Category>
+            <Category title="Blog">
+                {Posts}
+                <p>see more here wow</p>
+            </Category>
         </Layout>
     )
 }

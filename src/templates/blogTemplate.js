@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
 
 const BlogPost = styled.div`
     grid-column: 1/-1;
+    line-height: 1.8;
 `
 
 export default function Template({
@@ -15,6 +17,9 @@ export default function Template({
     const { frontmatter, html } = markdownRemark
     return (
         <Layout className="blog-post-container">
+            <Helmet>
+                <title>{frontmatter.title}</title>
+            </Helmet>
             <BlogPost className="blog-post">
                 <h1>{frontmatter.title}</h1>
                 <h2>{frontmatter.date}</h2>
