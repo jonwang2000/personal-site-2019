@@ -1,7 +1,7 @@
 ---
-path: testing-new
+path: "/blog/testing-new"
 date: "2019-08-18T22:46:54.432Z"
-title: Testing New
+title: "Testing New"
 ---
 Testing new blog layout
 
