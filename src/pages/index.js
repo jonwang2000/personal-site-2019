@@ -18,6 +18,17 @@ const Upper = styled.div`
 const Logo = styled.h1`
     font-size: 4em;
     line-height: 0.5;
+    margin: 0;
+    margin-bottom: .4em;
+`
+
+const Title = styled.h1`
+    padding: 0;
+    margin: 0;
+    margin-bottom: .3em;
+`
+
+const Subtitle = styled.h2`
 `
 
 // Helper functions
@@ -50,8 +61,8 @@ export default ({
             </Helmet>
             <Upper>
                 <Logo>JW</Logo>
-                <h1>Jonathan Wang</h1>
-                <h2>Mathematics, UW 2023</h2>
+                <Title>Jonathan Wang</Title>
+                <Subtitle>Mathematics, UW 2023</Subtitle>
 
                 <p>
                     I'm a mathematics student at the University of Waterloo,

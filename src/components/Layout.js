@@ -11,7 +11,9 @@ const Base = styled.div`
 
 const Content = styled.div`
     max-width: 900px;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 3em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1em;
@@ -20,6 +22,15 @@ const Content = styled.div`
 
 const Footer = styled.div`
     flex-shrink: 0;
+    margin-top: 1em;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const FooterContent = styled.div`
 `
 
 export default ({ children }) => (
@@ -28,6 +39,8 @@ export default ({ children }) => (
             <ParticleBackground />
             {children}
         </Content>
-        <Footer>Footer</Footer>
+        <Footer>
+            <FooterContent>Footer</FooterContent>
+        </Footer>
     </Base>
 )

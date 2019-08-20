@@ -8,6 +8,7 @@ import Layout from "../components/Layout"
 const BlogPost = styled.div`
     grid-column: 1/-1;
     line-height: 1.8;
+    width: 100%;
 `
 
 export default function Template({

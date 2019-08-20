@@ -1,7 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+    padding-bottom: 1em;
+`
+
 const PostLink = ({ post }) => (
-    <div>
+    <Wrapper>
         <Link to={post.frontmatter.path}>
             <div>
                 {post.frontmatter.title}
@@ -10,6 +16,7 @@ const PostLink = ({ post }) => (
                 {post.frontmatter.date}
             </div>
         </Link>
-    </div>
+    </Wrapper>
 )
+
 export default PostLink
