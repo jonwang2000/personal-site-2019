@@ -18,7 +18,7 @@ const Upper = styled.div`
 const Logo = styled.h1`
     font-size: 4em;
     line-height: 0.5;
-    margin-top: 0.5em;
+    margin-top: 0.25em;
     margin-bottom: 0.5em;
 `
 
@@ -74,13 +74,19 @@ export default ({
                 </p>
             </Upper>
 
-            <Category title="Experience">{dataToBlockList(expData)}</Category>
+            <Category title="Experience">
+                {dataToBlockList(expData)}
+                <a href="resume.pdf">Full résumé</a>
+            </Category>
 
-            <Category title="Projects">{dataToBlockList(projData)}</Category>
+            <Category title="Projects">
+            {dataToBlockList(projData)}
+                <a href="https://www.github.com/jonwang2000">See more on Github</a>
+            </Category>
 
             <Category title="Blog">
                 {Posts}
-                <p>see more here wow</p>
+                <a href="./blog">More posts</a>
             </Category>
         </Layout>
     )
@@ -88,37 +94,37 @@ export default ({
 
 const expData = [
     {
-        title: "Software Tester",
+        title: "Software Developer Co-op",
         subtitle: "Palette Gear",
         main:
-            "tested stuffas df;lkajd;fja ds;lk jfa;lsdkjfa ;ldskjfa ;ldksjfa;lskdj fa; lkjdfl;",
+            "Implemented error/minidump service in Node.js backend, developed integrations for Qt front end and Adobe CC extension",
         italics: "May 2019 - Aug 2019",
-        link: "#",
+        link: "https://www.palettegear.com",
     },
 ]
 
 const projData = [
     {
-        title: "Project Title",
-        subtitle: "project sasdf a",
+        title: "Replacer",
+        subtitle: "",
         main:
-            "prasdfasdfasdfasd asdf asdf asdf aasdfasdfasdfasdsdf asdfoject main",
-        italics: "wow technologies",
-        link: "#",
+            "Webapp that transforms text live based on user-inputted rules, designed with Material UI",
+        italics: "React, Javascript, CSS",
+        link: "https://replacer.netlify.com",
     },
     {
-        title: "Project Title",
-        subtitle: "project subtitle",
-        main: "project main",
-        italics: "wow technologies",
-        link: "#",
+        title: "Two Player Snake",
+        subtitle: "",
+        main: "Classic game of snake with additional head-to-head multiplayer mode",
+        italics: "Pygame, Python",
+        link: "https://github.com/jonwang2000/twoPlayerSnake",
     },
     {
-        title: "Project Title",
-        subtitle: "project subtitle",
-        main: "project main",
+        title: "Goosify",
+        subtitle: "",
+        main: "Chrome extension that turns any and all images on a page into an image of a goose",
         italics: "wow technologies",
-        link: "#",
+        link: "https://github.com/jonwang2000/goosify",
     },
 ]
 

@@ -13,8 +13,8 @@ const Content = styled.div`
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1em;

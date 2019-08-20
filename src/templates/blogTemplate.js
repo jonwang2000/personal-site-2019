@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 
 const BlogPost = styled.div`
-    grid-column: 1/-1;
+    grid-column: 2/-2;
     line-height: 1.8;
     width: 100%;
 `
