@@ -1,8 +1,7 @@
 ---
 path: /blog/hello-world
 date: 2019-08-19T21:11:04.478Z
-title: TESTING PLEASE WORK
+title: Hello World
 ---
-```
-hi world
-```
+
+Just testing some stuff.

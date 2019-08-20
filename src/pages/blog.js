@@ -16,7 +16,7 @@ export default ({
     },
 }) => {
     const Posts = edges
-        .map(edge => <PostLink key={edge.node.id} post={edge.node} flat={true}/>)
+        .map(edge => <PostLink key={edge.node.id} post={edge.node} flat={false}/>)
         .slice(0, 5)
 
     return <Layout>
