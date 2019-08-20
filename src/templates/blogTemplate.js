@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
+import HomeButton from "../components/HomeButton"
 
 const BlogPost = styled.div`
     grid-column: 2/-2;
@@ -22,6 +23,7 @@ export default function Template({
                 <title>{frontmatter.title}</title>
             </Helmet>
             <BlogPost className="blog-post">
+                <HomeButton/>
                 <h1>{frontmatter.title}</h1>
                 <h3>{frontmatter.date}</h3>
                 <div
