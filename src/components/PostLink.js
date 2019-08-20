@@ -6,6 +6,10 @@ const Wrapper = styled.div`
     padding-bottom: 1em;
 `
 
+const Italics = styled.div`
+    font-style: italic;
+`
+
 const PostLink = props => {
     const { post, flat } = props
 
@@ -24,7 +28,7 @@ const PostLink = props => {
             <Wrapper>
                 <Link to={post.frontmatter.path}>
                     <div>{post.frontmatter.title}</div>
-                    <div>{post.frontmatter.date}</div>
+                    <Italics>{post.frontmatter.date}</Italics>
                 </Link>
             </Wrapper>
         )
