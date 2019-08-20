@@ -18,18 +18,17 @@ const Upper = styled.div`
 const Logo = styled.h1`
     font-size: 4em;
     line-height: 0.5;
-    margin: 0;
-    margin-bottom: .4em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 `
 
 const Title = styled.h1`
     padding: 0;
     margin: 0;
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
 `
 
-const Subtitle = styled.h2`
-`
+const Subtitle = styled.h2``
 
 // Helper functions
 const dataToBlockList = data => {

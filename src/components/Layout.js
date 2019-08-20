@@ -14,6 +14,7 @@ const Content = styled.div`
     width: 100%;
     margin: 0 auto;
     margin-top: 3em;
+    margin-bottom: 3em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1em;
@@ -31,7 +32,22 @@ const Footer = styled.div`
 `
 
 const FooterContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 `
+
+const FooterLinks = styled.div`
+    margin: auto;
+    padding-bottom: .5em;
+`
+
+const FooterLink = styled.a`
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+`
+
+const FooterCredits = styled.p``
 
 export default ({ children }) => (
     <Base>
@@ -40,7 +56,21 @@ export default ({ children }) => (
             {children}
         </Content>
         <Footer>
-            <FooterContent>Footer</FooterContent>
+            <FooterContent>
+                <FooterLinks>
+                    <FooterLink href="https://www.github.com/jonwang2000">
+                        Github
+                    </FooterLink>
+                    <FooterLink href="https://www.linkedin.com/in/jonathanwang2000/">
+                        LinkedIn
+                    </FooterLink>
+                    <FooterLink href="#">email</FooterLink>
+                    <FooterLink href="#">Resume</FooterLink>
+                </FooterLinks>
+                <FooterCredits>
+                    Made with Gatsby, styled-components, and React
+                </FooterCredits>
+            </FooterContent>
         </Footer>
     </Base>
 )
