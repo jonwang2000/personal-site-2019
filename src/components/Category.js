@@ -8,12 +8,18 @@ const Wrapper = styled.div`
     }
 `
 
+const CatTitle = styled.h2`
+    color: #5fefa8;
+    font-weight: normal;
+    font-family: "monaco", "consolas", monospace;
+`
+
 const Category = (props) => {
     const { title } = props
 
     return (
         <Wrapper>
-            <h2>{title}</h2>
+            <CatTitle>> {title}</CatTitle>
             {props.children}
         </Wrapper>
     )

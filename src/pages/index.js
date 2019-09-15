@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
@@ -13,6 +13,7 @@ const Upper = styled.div`
     grid-column: 1/-1;
     line-height: 160%;
     text-align: justify;
+    font-family: "Montserrat", "Times New Roman";
 `
 
 const Logo = styled.h1`
@@ -26,9 +27,14 @@ const Title = styled.h1`
     padding: 0;
     margin: 0;
     margin-bottom: 0.3em;
+    color: #5fefa8;
+    font-weight: normal;
+    font-family: "monaco", "Consolas", monospace;
 `
 
-const Subtitle = styled.h2``
+const Subtitle = styled.h2`
+    font-family: "Montserrat", "Times New Roman";
+`
 
 // Helper functions
 const dataToBlockList = data => {
@@ -52,6 +58,21 @@ export default ({
     const Posts = edges
         .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
         .slice(0, 5)
+    const [underline, setUnderline] = useState("")
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (underline === "") {
+                setUnderline("_")
+            } else {
+                setUnderline("")
+            }
+        }, 500)
+
+        return () => {
+            clearInterval(interval)
+        }
+    })
 
     return (
         <Layout>
@@ -60,7 +81,7 @@ export default ({
             </Helmet>
             <Upper>
                 <Logo>JW</Logo>
-                <Title>Jonathan Wang</Title>
+                <Title>> Jonathan Wang{underline}</Title>
                 <Subtitle>Mathematics, UW 2023</Subtitle>
 
                 <p>
@@ -80,8 +101,10 @@ export default ({
             </Category>
 
             <Category title="Projects">
-            {dataToBlockList(projData)}
-                <a href="https://www.github.com/jonwang2000">See more on Github</a>
+                {dataToBlockList(projData)}
+                <a href="https://www.github.com/jonwang2000">
+                    See more on Github
+                </a>
             </Category>
 
             <Category title="Blog">
@@ -115,14 +138,16 @@ const projData = [
     {
         title: "Two Player Snake",
         subtitle: "",
-        main: "Classic game of snake with additional head-to-head multiplayer mode",
+        main:
+            "Classic game of snake with additional head-to-head multiplayer mode",
         italics: "Pygame, Python",
         link: "https://github.com/jonwang2000/twoPlayerSnake",
     },
     {
         title: "Goosify",
         subtitle: "",
-        main: "Chrome extension that turns any and all images on a page into an image of a goose",
+        main:
+            "Chrome extension that turns any and all images on a page into an image of a goose",
         italics: "wow technologies",
         link: "https://github.com/jonwang2000/goosify",
     },
