@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import ParticleBackground from "../components/ParticleBackground"
@@ -26,7 +27,7 @@ const Footer = styled.div`
     flex-shrink: 0;
     margin-top: 1em;
     width: 100%;
-    height: 5em;
+    height: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +37,12 @@ const FooterContent = styled.div`
     display: flex;
     flex-direction: column;
     margin: auto;
+`
+
+const FooterHome = styled.div`
+    margin: auto;
+    padding: .5em;
+    font-size: 1.4em;
 `
 
 const FooterLinks = styled.div`
@@ -60,6 +67,7 @@ export default ({ children }) => (
         </Content>
         <Footer>
             <FooterContent>
+                <FooterHome><Link to="">JW</Link></FooterHome>
                 <FooterLinks>
                     <FooterLink href="https://www.github.com/jonwang2000">
                         Github

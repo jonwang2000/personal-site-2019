@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
@@ -19,6 +19,7 @@ const Upper = styled.div`
 const Logo = styled.h1`
     font-size: 4em;
     line-height: 0.5;
+    padding: 0.2em;
     margin-top: 0.25em;
     margin-bottom: 0.5em;
 `
@@ -112,7 +113,7 @@ export default ({
             <Category title="Blog">
                 {Posts}
 
-                <a href="./blog">More posts</a>
+                <Link to="/blog">More Posts</Link>
             </Category>
         </Layout>
     )

@@ -4,12 +4,16 @@ import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import Layout from "../components/Layout"
-import HomeButton from "../components/HomeButton"
 
 const BlogPost = styled.div`
     grid-column: 2/-2;
     line-height: 1.8;
     width: 100%;
+`
+
+const BlogTitle = styled.h1`
+    color: #5fefa8;
+    font-family: "monaco", "Lucida Console", monospace;
 `
 
 export default function Template({
@@ -23,8 +27,7 @@ export default function Template({
                 <title>{frontmatter.title}</title>
             </Helmet>
             <BlogPost className="blog-post">
-                <HomeButton/>
-                <h1>{frontmatter.title}</h1>
+                <BlogTitle>{frontmatter.title}</BlogTitle>
                 <h3>{frontmatter.date}</h3>
                 <div
                     className="blog-post-content"
