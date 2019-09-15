@@ -29,7 +29,7 @@ const Title = styled.h1`
     margin-bottom: 0.3em;
     color: #5fefa8;
     font-weight: normal;
-    font-family: "monaco", "Consolas", monospace;
+    font-family: "monaco", "Lucida Console", monospace;
 `
 
 const Subtitle = styled.h2`
@@ -82,7 +82,7 @@ export default ({
             <Upper>
                 <Logo>JW</Logo>
                 <Title>> Jonathan Wang{underline}</Title>
-                <Subtitle>Mathematics, UW 2023</Subtitle>
+                <Subtitle>Computational Mathematics, UW 2023</Subtitle>
 
                 <p>
                     I'm a mathematics student at the University of Waterloo,
@@ -97,11 +97,13 @@ export default ({
 
             <Category title="Experience">
                 {dataToBlockList(expData)}
-                <a href="resume.pdf">Full résumé</a>
+
+                <a href="resume.pdf">Full résumé here</a>
             </Category>
 
             <Category title="Projects">
                 {dataToBlockList(projData)}
+
                 <a href="https://www.github.com/jonwang2000">
                     See more on Github
                 </a>
@@ -109,6 +111,7 @@ export default ({
 
             <Category title="Blog">
                 {Posts}
+
                 <a href="./blog">More posts</a>
             </Category>
         </Layout>
@@ -148,7 +151,7 @@ const projData = [
         subtitle: "",
         main:
             "Chrome extension that turns any and all images on a page into an image of a goose",
-        italics: "wow technologies",
+        italics: "Javascript",
         link: "https://github.com/jonwang2000/goosify",
     },
 ]

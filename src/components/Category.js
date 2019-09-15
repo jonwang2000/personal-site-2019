@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 const CatTitle = styled.h2`
     color: #5fefa8;
     font-weight: normal;
-    font-family: "monaco", "consolas", monospace;
+    font-family: "monaco", "Lucida Console", monospace;
 `
 
 const Category = (props) => {

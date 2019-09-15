@@ -40,7 +40,7 @@ const FooterContent = styled.div`
 
 const FooterLinks = styled.div`
     margin: auto;
-    padding-bottom: .5em;
+    padding-bottom: .7em;
 `
 
 const FooterLink = styled.a`
@@ -48,7 +48,9 @@ const FooterLink = styled.a`
     padding-right: 0.5em;
 `
 
-const FooterCredits = styled.p``
+const FooterCredits = styled.p`
+    font-size: .8em;
+`
 
 export default ({ children }) => (
     <Base>
@@ -65,8 +67,7 @@ export default ({ children }) => (
                     <FooterLink href="https://www.linkedin.com/in/jonathanwang2000/">
                         LinkedIn
                     </FooterLink>
-                    <FooterLink href="#">email</FooterLink>
-                    <FooterLink href="#">Resume</FooterLink>
+                    <FooterLink href="mailto:jonathanw.ca@hotmail.com">email</FooterLink>
                 </FooterLinks>
                 <FooterCredits>
                     Made with Gatsby, styled-components, and React
