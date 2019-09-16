@@ -16,6 +16,7 @@ const Content = styled.div`
     margin: 0 auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    padding-right: 1rem;
     padding-left: 1rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);

@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
     grid-column: 1/-1;
+    padding-top: 1em;
     @media (min-width: 900px) {
         grid-column: span 4;
     }
