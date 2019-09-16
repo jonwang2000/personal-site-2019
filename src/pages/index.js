@@ -81,7 +81,7 @@ export default ({
                 <title>Jonathan Wang</title>
             </Helmet>
             <Upper>
-                <Logo>JW</Logo>
+                <Link to=""><Logo>JW</Logo></Link>
                 <Title>> Jonathan Wang{underline}</Title>
                 <Subtitle>Computational Mathematics, UW 2023</Subtitle>
 
