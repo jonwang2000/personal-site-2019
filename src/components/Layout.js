@@ -25,9 +25,7 @@ const Content = styled.div`
 
 const Footer = styled.div`
     flex-shrink: 0;
-    margin-top: 1em;
     width: 100%;
-    height: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
