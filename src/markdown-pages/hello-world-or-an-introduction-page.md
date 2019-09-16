@@ -9,7 +9,7 @@ Let's talk about something else, how about this site?
 
 I initially had this site looking something like this: 
 
-<img src="https://i.imgur.com/jos4S8p.png" width="500">
+![Old site](https://i.imgur.com/jos4S8p.png)
 
 Looks pretty much the exact same, right? Minus the 'logo' thing I have it's the exact same structure and colour. The big differences are that it's now made using Gatsby instead of HTML/CSS, which lets me make these blog posts easily.
 
