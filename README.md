@@ -1,10 +1,10 @@
 # Personal Site 2019
 
+![screenshot of site](https://i.imgur.com/mAO7D10.png)
+
 Built with Gatsby and React, using CSS grid for responsive design.
 
 TODO:
 
-* Cleanup code
-* Styling on links
-* Work on blog
-* Overall theming
+* CSS tweaks for mobile clients
+* General content updates
