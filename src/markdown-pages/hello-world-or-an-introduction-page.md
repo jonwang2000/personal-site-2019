@@ -1,5 +1,5 @@
 ---
-path: hello-world
+path: /hello-world
 date: 2019-09-16T01:59:27.924Z
 title: 'Hello World (or, an Introduction page)'
 ---
