@@ -122,11 +122,11 @@ export default ({
 const expData = [
     {
         title: "Software Developer Co-op",
-        subtitle: "Palette Gear",
+        subtitle: "Monogram CC (formerly Palette Gear)",
         main:
             "Implemented error/minidump service in Node.js backend, developed integrations for Qt front end and Adobe CC extension",
         italics: "May 2019 - Aug 2019",
-        link: "https://www.palettegear.com",
+        link: "https://monogramcc.com/",
     },
 ]
 
