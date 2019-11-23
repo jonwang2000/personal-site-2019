@@ -81,7 +81,9 @@ export default ({
                 <title>Jonathan Wang</title>
             </Helmet>
             <Upper>
-                <Link to=""><Logo>JW</Logo></Link>
+                <Link to="">
+                    <Logo>JW</Logo>
+                </Link>
                 <Title>> Jonathan Wang{underline}</Title>
                 <Subtitle>Computational Mathematics, UW 2023</Subtitle>
 
@@ -121,8 +123,15 @@ export default ({
 
 const expData = [
     {
+        title: "Developer in Computational Medicine",
+        subtitle: "SickKids CCM",
+        main: "Upcoming work term",
+        italics: "Jan 2020 - Apr 2020",
+        link: "https://ccm.sickkids.ca/",
+    },
+    {
         title: "Software Developer Co-op",
-        subtitle: "Monogram CC (formerly Palette Gear)",
+        subtitle: "Monogram CC (Palette Gear)",
         main:
             "Implemented error/minidump service in Node.js backend, developed integrations for Qt front end and Adobe CC extension",
         italics: "May 2019 - Aug 2019",
