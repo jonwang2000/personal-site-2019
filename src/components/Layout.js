@@ -66,7 +66,7 @@ export default ({ children }) => (
         </Content>
         <Footer>
             <FooterContent>
-                <FooterHome><Link to="">JW</Link></FooterHome>
+                <FooterHome><Link to="/">JW</Link></FooterHome>
                 <FooterLinks>
                     <FooterLink href="https://www.github.com/jonwang2000">
                         Github

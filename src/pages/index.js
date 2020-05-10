@@ -81,7 +81,7 @@ export default ({
                 <title>Jonathan Wang</title>
             </Helmet>
             <Upper>
-                <Link to="">
+                <Link to="/">
                     <Logo>JW</Logo>
                 </Link>
                 <Title>> Jonathan Wang{underline}</Title>
@@ -95,6 +95,7 @@ export default ({
                 </p>
                 <p>
                     I'm a fan of video games, cooking, and the Toronto Raptors.
+                    My latest hobbies are sneakers and running.
                 </p>
             </Upper>
 
@@ -125,7 +126,8 @@ const expData = [
     {
         title: "Developer in Computational Medicine",
         subtitle: "SickKids CCM",
-        main: "Upcoming work term",
+        main:
+            "Developed React app for medical DICOM bulk image processing and features/bugfixes for Rareconnect, a social network for rare disease patients",
         italics: "Jan 2020 - Apr 2020",
         link: "https://ccm.sickkids.ca/",
     },
