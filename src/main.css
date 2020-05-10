@@ -35,3 +35,15 @@ a {
 a:active, a:focus, a:hover {
     color: #5fefa8;
 }
+
+.blog-post-content figure {
+    text-align: center;
+}
+
+.blog-post-content figure img {
+    margin: 0;
+}
+
+.blog-post-content figcaption {
+    font-size: smaller;
+}

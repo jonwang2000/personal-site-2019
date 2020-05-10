@@ -9,7 +9,7 @@ I've picked up running as a new "hobby" (if you can call it that) ever since my 
 
 <figure>
 <img src="https://i.imgur.com/1T7twOI.png" alt="running-graph"/>
-<figcaption>You can really when lockdown started.</figcaption>
+<figcaption>You can really tell when lockdown started.</figcaption>
 </figure>
 
 
