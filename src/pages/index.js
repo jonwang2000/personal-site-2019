@@ -84,7 +84,10 @@ export default ({
                 <Link to="/">
                     <Logo>JW</Logo>
                 </Link>
-                <Title>> Jonathan Wang{underline}</Title>
+                <Title>
+                    {`> Jonathan Wang`}
+                    {underline}
+                </Title>
                 <Subtitle>Computational Mathematics, UW 2023</Subtitle>
 
                 <p>
@@ -99,18 +102,18 @@ export default ({
                 </p>
             </Upper>
 
-            <Category title="Experience">
-                {dataToBlockList(expData)}
-
-                <a href="resume.pdf">Full résumé here</a>
-            </Category>
-
             <Category title="Projects">
                 {dataToBlockList(projData)}
 
                 <a href="https://www.github.com/jonwang2000">
                     See more on Github
                 </a>
+            </Category>
+
+            <Category title="Experience">
+                {dataToBlockList(expData)}
+
+                <a href="resume.pdf">Full résumé here</a>
             </Category>
 
             <Category title="Blog">
@@ -123,6 +126,13 @@ export default ({
 }
 
 const expData = [
+    {
+        title: "Software Developer",
+        subtitle: "Box Labs",
+        main: "TBD",
+        italics: "Sept 2020 - Dec 2020",
+        link: "https://boxlabs.ca",
+    },
     {
         title: "Developer in Computational Medicine",
         subtitle: "SickKids CCM",
