@@ -10,6 +10,7 @@ import Category from "../components/Category"
 
 // Styled Components
 const Upper = styled.div`
+    padding-top: 1em;
     grid-column: 1/-1;
     line-height: 160%;
     text-align: justify;
@@ -129,7 +130,7 @@ const expData = [
     {
         title: "Software Developer",
         subtitle: "Box Labs",
-        main: "TBD",
+        main: "Features/services for Box Labs, an electron application for pharmacies connecting healthcare services",
         italics: "Sept 2020 - Dec 2020",
         link: "https://boxlabs.ca",
     },

@@ -9,11 +9,14 @@ const SectionWrapper = styled.div`
     padding-bottom: 1em;
 `
 const SectionSubtitle = styled.div`
-    font-size: 1em;
+    font-size: 1.1em;
 `
+
 const SectionText = styled.div`
     font-size: 0.9em;
+    padding: 0.2em 0 0.2em 0;
 `
+
 const SectionItalics = styled.div`
     font-size: 0.9em;
     font-style: italic;
