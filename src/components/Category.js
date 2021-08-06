@@ -15,12 +15,12 @@ const CatTitle = styled.h2`
     font-family: "monaco", "Lucida Console", monospace;
 `
 
-const Category = (props) => {
+const Category = props => {
     const { title } = props
 
     return (
         <Wrapper>
-            <CatTitle>> {title}</CatTitle>
+            <CatTitle>{`> ${title}`}</CatTitle>
             {props.children}
         </Wrapper>
     )

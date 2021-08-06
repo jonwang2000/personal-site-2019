@@ -129,8 +129,17 @@ export default ({
 const expData = [
     {
         title: "Software Developer",
+        subtitle: "Accedo.tv",
+        main:
+            "Full Stack work on various connected TV applications and applications for clients including Bloomberg and Tier-1 Cable Operator in US",
+        italics: "May 2021 - Aug 2021",
+        link: "https://www.accedo.tv/",
+    },
+    {
+        title: "Software Developer",
         subtitle: "Box Labs",
-        main: "Features/services for Box Labs, an electron application for pharmacies connecting healthcare services",
+        main:
+            "Features/services for Box Labs, an electron application for pharmacies connecting healthcare services",
         italics: "Sept 2020 - Dec 2020",
         link: "https://boxlabs.ca",
     },
